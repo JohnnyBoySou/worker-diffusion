@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+python-multipart
+diffusers[torch]
+transformers
+torch
+xformers
+pillow
+opencv-python
+httpx

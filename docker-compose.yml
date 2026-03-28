@@ -1,0 +1,12 @@
+services:
+  worker-diffusion:
+    build: .
+    container_name: worker-diffusion
+    ports:
+      - "1005:1005"
+    gpus: all
+    volumes:
+      - ./data:/app/data
+    environment:
+      - HF_HOME=/app/data/.hf
+      - WORKER_DIFFUSION_API_KEY=${WORKER_DIFFUSION_API_KEY}
